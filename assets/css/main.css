@@ -1,0 +1,819 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "segoe UI Symbol";
+    font-weight: 200;
+    color: #414f57;
+    font-size: 16px;
+}
+a {
+    cursor: pointer;
+}
+
+h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* Header CSS */
+header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/bgHeader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    padding-top: calc((100vh - 280px)/2);
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 875px) {
+    header {
+
+    }
+}
+@media only screen and (max-width: 800px) {
+    header h1 {
+        font-size: 65px;
+        line-height: 65px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+
+    header h1 {
+        font-size: 40px;
+    }
+}
+
+/* Nav CSS */
+nav {
+    position: fixed;
+    top: 0;
+    height: 75px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12.5px 100px;
+}
+nav a {
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.15s ease-in-out;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #fff;
+}
+
+.logo {
+    height: 50px;
+    width: 210px;
+}
+
+
+nav ul {
+    float: right;
+    height: 50px;
+}
+nav ul a {
+    font-size: 17.5px;
+    line-height: 50px;
+    margin: 0 12.5px;
+}
+
+nav.nonTopNav {
+    background-color: #fff;
+    box-shadow: 0 0 3vh black;
+    z-index: 2000;
+}
+nav.nonTopNav a.brandName {
+    color: #D50106;
+}
+nav.nonTopNav a {
+    color: #414f57;
+}
+nav.nonTopNav a:hover {
+    color: #D8793D;
+}
+nav button.menuButton {
+    display: none;
+    float: right;
+    border: none;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    box-sizing: border-box;
+    padding: 2.5px;
+    outline: none;
+    cursor: pointer;
+}
+nav button.menuButton svg {
+    height: 100%;
+    width: 100%;
+}
+nav button.menuButton svg path {
+    transition: fill 0.15s ease-in-out;
+    fill: rgba(255, 255, 255, 0.55);
+}
+nav button.menuButton:hover svg path {
+    fill: #fff;
+}
+nav.nonTopNav button.menuButton svg path {
+    fill: #414f57;
+}
+nav.nonTopNav button.menuButton:hover svg path {
+    fill: #D8793D;
+}
+
+nav button.menuButton svg.menuIcon {
+    display: block;
+}
+nav button.menuButton svg.closeIcon {
+    display: none;
+}
+
+@media only screen and (max-width: 925px) {
+    nav {
+        padding: 12.5px 25px;
+    }
+    .logo {
+        padding-left: 10%;
+    }
+}
+@media only screen and (max-width: 755px) {
+    nav {
+        padding: 12.5px;
+    }
+    body.activeNavLinks {
+        overflow: hidden;
+    }
+    nav button.menuButton {
+        display: block !important;
+    }
+    body.activeNavLinks nav {
+        box-shadow: none;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        transition: none;
+    }
+    body.activeNavLinks nav.nonTopNav {
+        background-color: #fff;
+    }
+    nav ul {
+        display: none;
+    }
+    body.activeNavLinks nav ul {
+        display: block !important;
+        clear: both;
+        overflow: auto;
+        width: 100%;
+        height: auto;
+        margin-top: calc(((100vh - 280px - 75px) / 2));
+    }
+    body.activeNavLinks nav ul a {
+        display: block;
+        text-align: center;
+        height: 70px;
+        font-size: 30px;
+    }
+    body.activeNavLinks nav button.menuButton svg.menuIcon {
+        display: none;
+    }
+    body.activeNavLinks nav button.menuButton svg.closeIcon {
+        display: block;
+    }
+    .logo{
+        padding-left: 10%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    nav {
+        height: 65px;
+    }
+    .logo {
+       height: 40px;
+       width: 168px;
+       padding-left: 10%;
+    }
+    nav button.menuButton {
+        height: 40px;
+        width: 40px;
+    }
+    body.activeNavLinks nav ul {
+        margin-top: calc(((100vh - 280px - 65px) / 2));
+    }
+    body.activeNavLinks nav ul a {
+        height: 60px;
+        font-size: 25px;
+    }
+}
+
+/* ADD CURSOR */
+.txt-type > .txt {
+    border-right: 0.08rem solid #fff;
+    padding-right: 2px;
+    /* Animating the cursor */
+    animation: blink 0.6s infinite;
+}
+
+.float-sm a{
+    color: #BEC0C1;
+}
+
+.fl-fl {
+    background: #315279;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 4px;
+    width: 190px;
+    position: fixed;
+    right: -160px;
+    z-index: 1000;
+    font: normal normal 10px Arial;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+.fa {
+    font-size: 20px;
+    color: #BEC0C1;
+    padding: 10px 0;
+    width: 40px;
+    margin-left: 8px;
+}
+
+.fl-fl:hover {
+    right: 0;
+}
+.fl-fl:active {
+    right: -160px;
+    position: fixed;
+}
+
+.fl-fl a {
+    color: #BEC0C1 !important;
+    text-decoration: none;
+    text-align: center;
+    line-height: 43px !important;
+    vertical-align: top !important;
+}
+
+.float-fb {
+    top: 160px;
+}
+
+.float-tw {
+    top: 215px;
+}
+
+.float-gp {
+    top: 270px;
+}
+
+.float-ig {
+    top: 325px;
+}
+
+.float-pn {
+    top: 380px;
+}
+
+
+
+/* ANIMATION */
+@keyframes blink {
+    0% {
+        border-right: 0.08rem solid rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        border-right: 0.08rem solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+#page .section-background {
+    background: white;
+}
+
+#page section * {
+    color: black !important;
+}
+
+#page .content {
+    width: 100%;
+}
+
+/* Section CSS */
+
+section h1.headerLine {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1;
+}
+
+section h1.headerLineLeft {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 1;
+}
+
+section div.lineContainer {
+    width: 100%;
+    height: 4px;
+    display: block;
+    text-align: center;
+    font-size: 0;
+    margin: 25px 0;
+}
+
+section div.lineContainerLeft {
+    width: 100%;
+    height: 4px;
+    display: block;
+    text-align: left;
+    font-size: 0;
+    margin: 25px 0;
+}
+
+section div.lineContainer div.line {
+    width: 50px;
+    height: 4px;
+    display: inline-block;
+    background-color: #D50106;
+    margin: 0;
+    line-height: 0;
+}
+
+section div.lineContainerLeft div.line {
+    width: 50px;
+    height: 4px;
+    display: inline-block;
+    background-color: #D50106;
+    margin: 0;
+    line-height: 0;
+}
+
+div.row {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+div.row div.col {
+    width: 300px;
+    display: inline-block;
+}
+
+
+
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -moz-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+.arrow {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -20px;
+    width: 45px;
+    height: 45px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAMFBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAGNe9CgcGtbOytLe2f5VrjfCKAAADsElEQVR4AezBgQAAAACAoP2pF6kCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDZpRvTiIEYiMLkzivb65/Xf7eBLSFkYAQzDUjwvS6rZ3N9LduekvuffFOAq/+Xs+T+pABffzhL7p8CfP3FBdQB3gXEH45S+psXEP9VgM7fvoD4rwJ0/v4FxF9TQE1IAT38YZbcPwV4+YsLGBNSQB9/mONf/XdIAZ38YR9y/xTg678KkPunAF//VYDcPwU4+IsLGDekgI7+cA+5fwow8hcUsPxTgLG/uIBxQQro6w/XEPinABd/bQHLPwUY+6sLeCEFdPeH989Hfj4poL//55ddOqgCAIQBKKT9S5vB294+GeAeA/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbM9DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAP//AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwPm+hvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA34Bd/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvQMXfAP4G8DeAvwH8DeBvQNPfAP4G8Deg7G8AfwPa/gbE/Q2I+xvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gYs8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbs9zeAvwH8DeBvAH8D+BvA3wD+BvT8DeBvAH8D+BvQ9TeAvwFtfwPi/gbwf+3BsQAAAADAIH/rYeypAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAUHBYk13Z7LTsAAAAASUVORK5CYII=);
+    background-size: contain;
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+.fade {
+    opacity: 0;
+    transition: 0.5s all ease-out;
+}
+
+
+/* About Section CSS */
+.aboutIntro {
+    margin-bottom: 60px;
+    padding: 75px 10%;
+    max-width: 1400px;
+
+    
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 1400px;
+    margin:0 auto;
+}
+
+.intro {
+    width: 50%;
+}
+
+.titleParagraph{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 815px) {
+    .aboutContainer {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .intro {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    section#about p {
+        width: 90%;
+    }
+}
+
+/*Clickable images*/
+
+.servicesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 760px;
+}
+
+.imgService {
+    display: inline-flex;
+    position: relative;
+    margin: 10px;
+    display: flex;
+}
+
+.imgService img{
+    width: 340px;
+}
+
+.imgService a {
+    margin-bottom: -5px;
+}
+
+.imgService h3{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.7em;
+    color: white;
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+}
+
+.imgService:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 815px) {
+    .servicesContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .servicesContainer img{
+        width: 340px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+        .servicesContainer img {
+            width: 250px;
+            height: auto;
+        }
+}
+
+
+/* vision Section CSS */
+section#vision {
+    padding: 250px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../img/bgvisionSection.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Contact Section CSS */
+section#contact {
+    padding: 75px 0;
+    padding-left: 5%;
+    overflow: auto;
+    text-align: left;
+}
+
+section#contact p.desc {
+    padding: 50px 20px 100px 20px;
+    text-align: left;
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(../img/repeatBackground.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    width: 500px;
+    display: inline-block;
+    margin: auto;
+}
+
+section#contact ul {
+    display: block;
+    text-align: left;
+}
+
+section#contact ul li {
+    display: block;
+    margin: 0 25px;
+    margin-top: 5px;
+}
+
+section#contact ul li p {
+    text-align: left;
+    margin: auto;
+}
+
+section#contact a {
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s;
+    cursor: pointer;
+    color: inherit;
+}
+
+section#contact a:hover {
+    border-color: #D50106;
+    color: #D50106;
+}
+
+@media only screen and (max-width: 500px) {
+    section#contact p.desc {
+        width: 90%;
+    }
+}
+
+.separated {
+    margin-left: 5%;
+}
+
+.contactUs {
+    float: left;
+    width: 300px;
+    margin-right: 200px;
+}
+
+.contactUs li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+
+/*About section form*/
+.contactTitle {
+    width: 90%;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #D8793D;
+}
+
+.contactDetails {
+    width: 90%;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 35px;
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+}
+
+@media only screen and (max-width: 500px) {
+    .contactDetails {
+        font-size: 16px;
+    }
+}
+
+.contactFormTitle {
+    width: 90%;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+@media only screen and (max-width: 1000px) {
+    form {
+        margin-right: 20%;
+    }
+}
+
+form input, form select {
+    transition: box-shadow .3s;
+    border: solid 1px #ccc;
+    margin: 10px 0;
+    padding: 10px 10px 10px 20px;
+    outline: none;
+    background: #fff;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+form textarea {
+    transition: box-shadow .3s;
+    border: solid 1px #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    background: #fff;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+form input:hover, form select:hover, form textarea:hover {
+    border: solid 1px rgba(216, 121, 61,.5);
+    box-shadow: 0 0 5px rgba(216, 121, 61,.5);
+}
+
+input:focus, select:focus, textarea:focus {
+    border: solid 1px rgba(216, 121, 61,.5);
+    box-shadow: 0 0 5px rgba(216, 121, 61,.5);
+}
+
+::-webkit-input-placeholder {
+    color: #a9a9a9;
+}
+
+:-moz-placeholder {
+    color: #a9a9a9;
+}
+
+::-moz-placeholder {
+    color: #a9a9a9;
+}
+
+:-ms-input-placeholder {
+    color: #a9a9a9;
+}
+
+form select option {
+    margin: 50px 0px 50px 0px;
+}
+
+form button {
+    padding: 15px;
+    color: white;
+    background: #D8793D;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 200px;
+    margin: 20px auto 0;
+    border-radius: 20px;
+}
+
+/* Footer CSS */
+footer {
+    padding: 65px 0;
+    text-align: center;
+    overflow: auto;
+}
+footer p.copyright {
+    font-size: 20px;
+    color: #414f57;
+    display: block;
+    float: left;
+    width: calc(100% - 10px);
+    text-align: center;
+}
+footer ul.links {
+    text-align: center;
+    overflow: auto;
+    margin-bottom: 5px;
+}
+footer ul.links a {
+    text-decoration: none;
+    height: 35px;
+    width: 35px;
+    padding: 7.5px 5px;
+    display: inline-block;
+}
+footer ul.links a svg {
+    height: 100%;
+    width: 100%;
+}
+footer ul.links a svg path {
+    fill: #D8793D;
+    transition: fill 0.15s ease-in-out;
+}
+footer ul.links a svg:hover path {
+    fill: #414f57;
+}
