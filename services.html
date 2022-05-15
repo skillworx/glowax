@@ -40,73 +40,77 @@
             </div>
         </nav>
     </div>
-    <header class="bgIndex">
-        <h1>Welkom bij GloWax!</h1>
-    </header>
 
-    <div class="intro">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <span class="introTitle">GloWax</span>
+        <header class="bgServices">
+        
+        </header>
+
+        <div class="detailing">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <span class="introTitle">Detailing</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                        prijskaart1
+                    </div>
+
+                    <div class="col">
+
+                        prijskaart 2
+                    </div>
+
+                    <div class="col">
+
+                        prijskaart 3
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus congue arcu, at placerat ligula porttitor vitae. Nunc eget enim pulvinar, fermentum nunc vitae, lobortis libero. <br />
-                        Donec eros metus, vulputate in metus et, pharetra eleifend quam.
-                    </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
 
-                <div class="col">
-                    <p>
-                        Praesent pretium odio in lacus egestas ornare. Nulla rutrum interdum augue ac vulputate. <br />
+    
 
-                        Morbi tincidunt purus ultrices tellus sollicitudin, a scelerisque diam semper. Vestibulum sagitt
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <span class="introTitle">Ons aanbod</span>
-            </div>
-        </div>
-    </div>
-    <div class="services">
 
-        <div class="fotogrid">
-            <div class="tile">
-                <a href="services.html">
-                    <img class="serviceImg" src="./assets/img/detailing.jpg" alt="Detailing">
-                </a>
-                <a href="services.html"><h4>Detailing</h4></a>
-            </div>
-            <div class="tile">
-                <a href="services.html">
-                    <img class="serviceImg" src="./assets/img/tinting.jpg" alt="Tinting">
-                </a>
-                <a href="services.html"><h4>Tinting</h4></a>
-            </div>
-        </div>
-        <div class="fotogrid">
-            <div class="tile">
-                <a href="services.html">
-                    <img class="serviceImg" src="./assets/img/interieur.jpg" alt="Interieur">
-                </a>
-                <a href="services.html"><h4>Interieur</h4></a>
-            </div>
-            <div class="tile">
-                <a href="services.html">
-                    <img class="serviceImg" src="./assets/img/chiptuning.jpg" alt="Chiptuning">
-                </a>
-                <a href="services.html"><h4>Chiptuning</h4></a>
-            </div>
-        </div>
-    </div>
 
     <div class="contact">
         <div class="container">
@@ -182,9 +186,7 @@
     <script src="https://kit.fontawesome.com/9ec55b6b03.js" crossorigin="anonymous"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>
-    <script>
-
-        // Scroll Link Functionality
+    <script>// Scroll Link Functionality
         $(".scrollLink").on("click", function () {
             $("body").removeClass("activeNavLinks");
             var scrollTo = this.getAttribute("scrolllink");
@@ -193,8 +195,6 @@
             } else {
                 $('html, body').animate({ scrollTop: $(scrollTo).offset().top - 50 }, 600, 'easeInOutExpo');
             }
-        });
-
-    </script>
+        });</script>
 </body>
 </html>
