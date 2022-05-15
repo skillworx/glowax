@@ -21,12 +21,25 @@ h1 {
     }
 }
 
-header {
+.bgIndex {
     height: 50vh;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/bgvisionSection.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/bgIndex.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
+    background-attachment: fixed;
+    color: #fff;
+    padding-top: calc((50vh - 280px)/2);
+    box-sizing: border-box;
+}
+
+/*header services secrion*/
+.bgServices {
+    height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/bgServices.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
     background-attachment: fixed;
     color: #fff;
     padding-top: calc((50vh - 280px)/2);
@@ -135,6 +148,7 @@ header {
 .intro {
     margin-bottom: 20px;
     margin-top: 40px;
+    
 }
 
 .introTitle {
@@ -143,18 +157,57 @@ header {
 }
 
 /*services*/
-.overview2 {
-    width: 40%;
+.services {
+    margin-bottom: 50px;
 }
 
-.overview3 {
-    width: 40%;
+.fotogrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
-.overview4 {
-    width: 40%;
+.tile {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 10px;
+    display: grid;
 }
 
+.tile a {
+    grid-row: 1;
+    grid-column: 1;
+    text-decoration: none;
+}
+
+.tile img {
+    object-fit: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+.tile h4 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+    text-shadow: 0px 0px 30px rgba(30, 30, 30, 1);
+    text-align: center;
+    padding: 10px 14px;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: flex-start;
+}
+
+.tile:hover {
+    border: 1px solid black;
+    filter: brightness(80%);
+}
 
 /*contact*/
 .contact {
@@ -184,17 +237,17 @@ header {
     text-align: center;
 }
 
-.social a {
-    display: inline;
-    margin:40px;
-}
+    .social a {
+        display: inline;
+        margin: 40px;
+    }
 
 .addresslines {
     margin-left: 52px;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .row {
         flex-direction: column;
     }
@@ -202,7 +255,8 @@ header {
     .col {
         margin: 20px 0;
     }
-    .address{
+
+    .address {
         margin-left: 10px;
     }
 
@@ -218,7 +272,6 @@ header {
         margin: 10px 10px 10px 10px;
         margin: 20px;
     }
-
 }
 
 /*footer with disclaimer/logo*/
